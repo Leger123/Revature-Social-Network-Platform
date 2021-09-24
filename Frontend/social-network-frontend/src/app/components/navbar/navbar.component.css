@@ -1,0 +1,15 @@
+.container-fluid{
+    background-color: chocolate;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-link{
+    font-weight: bolder;
+    color: peachpuff;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    color: peachpuff;
+}

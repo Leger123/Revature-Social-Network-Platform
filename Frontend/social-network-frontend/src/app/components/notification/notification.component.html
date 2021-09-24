@@ -1,0 +1,7 @@
+<div *ngFor="let notification of notifications">
+    <a routerLink="/profile/{{notification.userResponse.id}}">{{notification.userResponse.name}}</a>
+    {{notification.type}} your 
+    <a routerLink="/feed/{{notification.feedID}}">Feed</a> 
+    <span *ngIf="notification.timestamp>lastNotification">(new)</span>
+</div>
+<button class="btn btn-secondary" (click)="getAll()">View All Notification</button>

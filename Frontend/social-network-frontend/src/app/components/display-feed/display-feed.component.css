@@ -1,0 +1,27 @@
+.action-item:hover{
+    background-color: pink;
+}
+
+#author-name{
+    justify-content: left;
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#like-btn{
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(0, 102, 255);
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+img{
+    max-width: 500px;
+}

@@ -1,0 +1,11 @@
+(Kevin)homepage: login, register-user, reset-password
+(Kevin)dashboard: create-feed, display-feed (like, comment), notification
+(Andrew)profile/{id}: view-profile(display-feed)
+(Andrew)update: update-user
+(Bhavani)search: search
+(Bhavani)feed/{id}: display-feed
+
+feature missing:
+(Zimi) prev next button for feeds/posts
+(Kevin) auto close when creating feed/post
+

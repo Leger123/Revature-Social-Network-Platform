@@ -1,0 +1,7 @@
+<div class=container>
+  <input type="text" class="name"  [(ngModel)]="searchStr" placeholder="name">
+  <div  *ngFor="let user of displayUsers">
+      <a routerLink="/profile/{{user.id}}">{{user.name}}</a>
+  </div>
+</div>
+  

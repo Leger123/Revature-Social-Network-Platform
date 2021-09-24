@@ -1,0 +1,30 @@
+<mat-card-header id="author-name">
+    <mat-card-title>{{feed.authorResponse.name}}</mat-card-title>
+</mat-card-header>
+<mat-card-content>{{feed.content}}</mat-card-content>
+<div>
+    <img mat-card-image src={{feed.imageUrl}}>
+</div>
+<youtube-player [width]="465" [videoId]="feed.videoUrl"></youtube-player>
+<mat-card-actions>
+    <mat-icon class="action-item" color="warn">favorite_border</mat-icon> {{feed.likesResponse}}
+</mat-card-actions>
+<div *ngFor="let comment of feed.comments">
+    <app-display-comment [comment]="comment"></app-display-comment>
+</div>
+<app-create-comment [feedID]="feed.id" (eventVal) = "refresh()"></app-create-comment>
+<button id="like-btn" (click)="likeFeed()">Like</button>
+<div>{{response.message}}</div>
+
+
+<!-- <mat-card-header>
+    <mat-card-title>{{feed.author.name}}</mat-card-title>
+</mat-card-header>
+<img mat-card-image src={{feed.imageUrl}}>
+<mat-card-content>
+    {{feed.content}}
+</mat-card-content>
+<mat-card-actions>
+    <mat-icon class="action-item" color="warn">chat_bubble_outline</mat-icon>
+    <mat-icon class="action-item" color="warn">favorite_border</mat-icon>
+</mat-card-actions> -->

@@ -1,0 +1,25 @@
+<div id="homepage-container">
+    
+    <div id="welcome-message">Welcome to Earth Best!</div>
+    
+    <div id="homepage-form">
+        <div *ngIf="pageType==1">
+            <app-login></app-login>
+            <button id="forgot-btn" (click)="pageType=2">Forgot Password?</button>
+            <button id="new-btn" (click)="pageType=3">New User?</button>
+        </div>
+        <div *ngIf="pageType==2">
+            <app-reset-password></app-reset-password>
+            <button class="back-btn" (click)="pageType=1">Back to Login</button>
+        </div>
+        <div *ngIf="pageType==3">
+            <app-register-user></app-register-user>
+            <button class="back-btn" (click)="pageType=1">Back to Login</button>
+        </div>
+    </div>
+
+    <div id="message-one">This site is the best, because it acknowledges that Earth beats Fire, Air, and Water! - Toph Beifong</div>
+    <div id="message-one">This Boulder finds this site to be bouldertastic! - 'The Boulder'</div>
+
+
+</div>

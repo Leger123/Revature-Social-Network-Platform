@@ -1,0 +1,31 @@
+Domain:
+http://18.119.105.113/
+
+User Service:
+register user             POST  api/user
+login                     POST  api/login
+reset password            PATCH api/user/password/{email}
+update profile            PUT   api/user
+get all user              GET   api/user
+view user profile         GET   api/user/{id}
+change profile image      PATCH api/user/profile-img/
+logout                    GET   api/logout
+check session             GET   api/check
+
+Feed Service:
+view all feed by user id  GET   api/feed/user/{id}
+create feed               POST  api/feed
+get all feed by offset    GET   api/feed/offset/{offset}
+like feed                 PATCH api/feed/{id}
+get one feed by id        GET   api/feed/{id}
+get feed counts           GET   api/feed/count
+
+Comment Service:
+comment feed              POST  api/comment/{id}
+
+Notification Service:
+get top 10 notification   GET   api/notification-preview
+get all notification      GET   api/notification
+
+ImageService
+upload image              POST  api/upload

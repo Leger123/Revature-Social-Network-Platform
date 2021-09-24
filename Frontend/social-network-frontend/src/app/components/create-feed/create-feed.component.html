@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Create Post</mat-card-title>
+    </mat-card-header>
+    <div>
+        <textarea placeholder="Type message..." [(ngModel)]="feed.content"></textarea>
+    </div>
+
+    <div id="video-preview">
+        <input type="text" placeholder="video id" [(ngModel)]="feed.videoUrl"/>
+        <youtube-player [height]="200" [width]="200" [videoId]="feed.videoUrl"></youtube-player>
+    </div>
+
+    <div id="image-preview">
+        <img [src]="feed.imageUrl"/>
+    </div>
+
+    <mat-card-actions align="end">
+        <app-upload (eventVal) = "receive($event)"></app-upload>
+        <button mat-flat-button mat-dialog-close color="warn" (click)="createFeed()">Post</button>
+    </mat-card-actions>
+</mat-card>
+

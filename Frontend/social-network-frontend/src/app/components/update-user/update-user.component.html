@@ -1,0 +1,38 @@
+<div id="update-user-container">
+    <div id="update-user-form">
+
+        <div>{{response.message}}</div>
+<!-- <div><input id="user-field" type="text" [(ngModel)]="user.username" placeholder="username" disabled/></div>
+<div><input id="user-field" type="password" [(ngModel)]="user.password" placeholder="password" required/></div>
+<div><input id="user-field" type="text" [(ngModel)]="user.name" placeholder="name" required/></div>
+<div><input id="user-field" type="text" [(ngModel)]="user.email" placeholder="email" disabled/></div>
+<img [src]="user.profileImage">
+<app-upload (eventVal) = "receive($event)"></app-upload>
+<button id="submit-btn" class="btn btn-success" (click)="onSubmit()">Submit</button> -->
+
+    <div class="form-floating">
+        <input id="user-field" type="text" class="form-control" [(ngModel)]="user.username" placeholder="username" disabled/>
+        <label for="floatingInput">User Name</label>
+    </div>
+
+    <div class="form-floating">
+        <input id="user-field" type="text" class="form-control" [(ngModel)]="user.email" placeholder="email" disabled/>
+        <label for="floatingInput">Email</label>
+    </div>
+
+    <div class="form-floating">
+        <input type="text" class="form-control" id="user-field" [(ngModel)]="user.name" placeholder="name" required>
+        <label for="floatingInput">Name</label>
+    </div>
+
+    <div class="form-floating">
+        <input type="password" class="form-control" id="user-field" [(ngModel)]="user.password" placeholder="" required>
+        <label for="floatingPassword">Password</label>
+    </div>
+
+    <img [src]="user.profileImage">
+    <app-upload (eventVal) = "receive($event)"></app-upload>
+    <button id="submit-btn" class="btn btn-success" (click)="onSubmit()">Submit</button>
+
+    </div>
+</div>

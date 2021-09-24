@@ -1,0 +1,51 @@
+
+#homepage-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+#homepage-form{
+    width: 500px;
+    background-color: rgb(214, 214, 214);
+    box-shadow: 2px 2px 8px rgb(98, 98, 98);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+#forgot-btn, #new-btn, .back-btn{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#forgot-btn, #new-btn, .back-btn{
+    border: none;
+    background-color: brown;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+#forgot-btn:hover, #new-btn:hover, .back-btn:hover{
+    background-color: peru;
+    transition: 400ms;
+}
+
+#welcome-message{
+    color:white;
+	text-align:center;
+	margin-top:200px;
+	text-shadow:1px 1px 1px black;
+	font-size:50px;
+}
+
+#message-one{
+    margin-top: 50px;
+    color: black;
+    font-style: italic;
+    font-size: medium;
+    font-weight: bold;
+}

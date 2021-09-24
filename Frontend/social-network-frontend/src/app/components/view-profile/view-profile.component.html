@@ -1,0 +1,10 @@
+<div id="profile-container">
+    <div>{{user.name}} profile</div>
+    <img id="profile-img" [src]="user.profileImage">
+    <br>
+    <div class="container" *ngFor = "let feed of feeds">
+        <mat-card id="view-profile-card">
+            <app-display-feed [feed]="feed"></app-display-feed>
+        </mat-card>
+    </div>
+</div>

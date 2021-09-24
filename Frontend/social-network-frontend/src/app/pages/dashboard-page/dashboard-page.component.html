@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<button (click)="displayNotification=!displayNotification" mat-flat-button class="btn btn-primary"><mat-icon>alarm</mat-icon></button>
+<div *ngIf="displayNotification" class="container bg-light">
+    <app-notification [lastNotification]="user.lastNotification"></app-notification>
+</div>
+<button (click)="onClickCreateFeed()" mat-flat-button color="warn" id="create-button"><mat-icon>add</mat-icon></button>
+<div id="display-feed">
+    <mat-card id="display-card" *ngFor="let feed of feedList">
+        <app-display-feed [feed]="feed"></app-display-feed>
+    </mat-card>
+    <button *ngIf="offset!=total" (click)="prev()">prev</button>
+    <button *ngIf="offset>1" (click)="next()">next</button>
+</div>

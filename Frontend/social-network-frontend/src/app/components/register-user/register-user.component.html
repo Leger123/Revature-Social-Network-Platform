@@ -1,0 +1,8 @@
+<div>{{response.message}}</div>
+<div><input id="register-username" type="text" [(ngModel)]="user.username" placeholder="Username" required/></div>
+<div><input id="register-password" type="password" [(ngModel)]="user.password" placeholder="Password" required/></div>
+<div><input id="register-email" type="text" [(ngModel)]="user.name" placeholder="Name" required/></div>
+<div><input id="register-name" type="text" [(ngModel)]="user.email" placeholder="Email" required/></div>
+<app-upload (eventVal) = "receive($event)"></app-upload>
+<img [src]="user.profileImage">
+<button id="submit-btn" (click)="onSubmit()">Submit</button>
